@@ -42,7 +42,6 @@ export class HorizontalVirtualScrollComponent implements OnInit {
     });
 
     this.matrix = matrix;
-    console.log(this.matrix);
   }
 
 }

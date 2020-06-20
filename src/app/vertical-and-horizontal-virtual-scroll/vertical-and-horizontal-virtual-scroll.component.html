@@ -21,13 +21,15 @@
 </div>
 
 
-<div style="display:flex;flex-direction: column">
-  <span>rowsCount: {{rowsCount}}</span>
-  <span>columnsCount: {{columnsCount}}</span>
-  <span>rowHeight: {{rowHeight}}</span>
-  <span>columnWidth: {{columnWidth}}</span>
-  <span>visibleRows: {{visibleRows}}</span>
-  <span>visibleColumns: {{visibleColumns}}</span>
-  <span>startRow: {{startRow}}</span>
-  <span>startColumn: {{startColumn}}</span>
+<div style="display:flex;flex-direction: column;margin-top: 20px">
+  <span>Rows Count: {{rowsCount}}</span>
+  <span>Columns Count: {{columnsCount}}</span>
+  <span>Row Height: {{rowHeight}}</span>
+  <span>Column Width: {{columnWidth}}</span>
+  <span>Visible Rows: {{visibleRows}}</span>
+  <span>Visible Columns: {{visibleColumns}}</span>
+  <span>Start Row: {{startRow}}</span>
+  <span>End Row: {{startRow + visibleRows}}</span>
+  <span>Start Column: {{startColumn}}</span>
+  <span>End Column: {{startColumn + visibleColumns}}</span>
 </div>

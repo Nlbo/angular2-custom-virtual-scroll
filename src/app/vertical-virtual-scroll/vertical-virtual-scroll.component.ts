@@ -14,7 +14,7 @@ export class VerticalVirtualScrollComponent implements OnInit {
   rowHeight = 27;
   columnWidth = 88;
   visibleRows = 10;
-  start = 0;
+  startRow = 0;
 
   rows = Array.from({length: this.rowsCount}).map((_, i) => `r${i}`);
   columns = Array.from({length: this.columnsCount}).map((_, i) => `c${i}`);
@@ -26,9 +26,9 @@ export class VerticalVirtualScrollComponent implements OnInit {
     const candidateStartRow = Math.floor(event.target.scrollTop / this.rowHeight);
 
     if (candidateStartRow <= (this.rowsCount - this.visibleRows)) {
-      this.start = candidateStartRow;
+      this.startRow = candidateStartRow;
     } else {
-      this.start = this.rowsCount - this.visibleRows;
+      this.startRow = this.rowsCount - this.visibleRows;
     }
   }
 
@@ -44,7 +44,6 @@ export class VerticalVirtualScrollComponent implements OnInit {
     });
 
     this.matrix = matrix;
-    console.log(this.matrix);
   }
 
 }

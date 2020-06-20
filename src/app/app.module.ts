@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { VerticalVirtualScrollComponent } from './vertical-virtual-scroll/vertical-virtual-scroll.component';
 import { HorizontalVirtualScrollComponent } from './horizontal-virtual-scroll/horizontal-virtual-scroll.component';
 import { VerticalAndHorizontalVirtualScrollComponent } from './vertical-and-horizontal-virtual-scroll/vertical-and-horizontal-virtual-scroll.component';
+import {FormsModule} from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -14,10 +15,11 @@ import { VerticalAndHorizontalVirtualScrollComponent } from './vertical-and-hori
     HorizontalVirtualScrollComponent,
     VerticalAndHorizontalVirtualScrollComponent
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        FormsModule
+    ],
   providers: [],
   bootstrap: [AppComponent]
 })
