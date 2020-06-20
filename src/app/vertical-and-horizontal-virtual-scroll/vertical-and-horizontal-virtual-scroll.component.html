@@ -1,0 +1,33 @@
+<h1 style="margin-bottom: 20px">Vertical and Horizontal Scroll</h1>
+<div class="P-spread-sheet-container" (scroll)="scrollRows($event)">
+  <div [style.height.px]="rowHeight * visibleRows" [style.width.px]="columnWidth * visibleColumns">
+    <div [style.height.px]="rowHeight * startRow"></div>
+    <div *ngFor="let row of matrix | slice: startRow:  (startRow + 1) + visibleRows;let rowIndex = index">
+      <div style="display: flex;width: fit-content;height: 27px">
+        <div class="P-grid-cell" *ngIf="startColumn" [style.width.px]="columnWidth * startColumn"></div>
+        <div class="P-grid-cell"
+             [style.width.px]="columnWidth"
+             [style.height.px]="rowHeight"
+             *ngFor="let column of row | slice: startColumn:  (startColumn + 1) + visibleColumns; let columnIndex = index;">
+          <p>
+            {{column}}
+          </p>
+        </div>
+        <div [style.width.px]="columnWidth * (row.length - (startColumn + visibleColumns))"></div>
+      </div>
+    </div>
+    <div [style.height.px]="rowHeight * (matrix.length - (startRow + visibleRows))"></div>
+  </div>
+</div>
+
+
+<div style="display:flex;flex-direction: column">
+  <span>rowsCount: {{rowsCount}}</span>
+  <span>columnsCount: {{columnsCount}}</span>
+  <span>rowHeight: {{rowHeight}}</span>
+  <span>columnWidth: {{columnWidth}}</span>
+  <span>visibleRows: {{visibleRows}}</span>
+  <span>visibleColumns: {{visibleColumns}}</span>
+  <span>startRow: {{startRow}}</span>
+  <span>startColumn: {{startColumn}}</span>
+</div>
