@@ -1,0 +1,260 @@
+
+// #region Colors
+
+
+$black         : #000000;
+$light-black   : #333333;
+$white         : #ffffff;
+$gray          : #bcbcbc;
+$dark-gray     : #666666;
+$light         : #f6f6f6;
+$light-gray    : #cccccc;
+$green         : #08AA72;
+$light-green   : #0bbf6b;
+$red           : #E6374C;
+$red-opacity   : rgba(250,0,0, 0.4);
+$light-red     : #dc444e;
+$yellow        : #EFAF00;
+$light-yellow  : #fbc43a;
+$orange        : #F0641E;
+$blue          : #52B1B5;
+
+
+$left-side-transition   : .3s;
+$left-side-closed-width : 80px;
+$left-side-width        : 300px;
+$main-color : #eb2f48;
+
+$radius: 6px;
+$dark-blue     : rgb(50, 107, 128);
+// #endregion
+
+// #region Alternative styles
+
+$shadow         : 0 0 10px rgba(0, 0, 0, .1);
+$shadow-2       : 0 0 10px rgba(0, 0, 0, .2);
+$shadow-3       : 0 0 10px rgba(0, 0, 0, .3);
+$color-shadow-1 : rgba(0,0,0, 0.1);
+$color-shadow-2 : rgba(0,0,0, 0.2);
+$color-shadow-3 : rgba(0,0,0, 0.3);
+$shadow-white   : 0 0 10px $white;
+$error-shadow   : 0 0 15px rgba(209, 0, 0, 0.3);
+$gradient       : linear-gradient(to right, #E5324A, #FD956B);
+$gradient-v     : linear-gradient(to bottom, #E5324A, #FD956B);
+
+// #endregion
+
+// #region App Components styles
+$body-color : $light;
+
+$tooltip-z  : 2000;
+$modal-z  : 1500;
+$change-z  : 1250;
+$header-z : 500;
+
+$left-side-width     : 350px;
+$header-height       : 60px;
+$content-top-padding : 20px;
+$padding             : 40px;
+$input-height        : 40px;
+// #endregion
+
+
+$app-color : #03A9F4;
+$app-text-color : #7D7D7D;
+$app-radius: 3px;
+$app-border: 1px solid #DDD;
+$app-padding: 20px;
+
+// button Variables
+$btn-width: 60px;
+$btn-height: 36px;
+$btn-radius: 3px;
+$btn-fontSize: 13px;
+
+
+// modal Variables
+$modal-bgColor: #fff;
+$modal-radius: 5px;
+
+
+// SpreadSheet variables
+
+// -------- SpreadSheet column ----------
+$column-header-min-width: 88px;
+$column-min-width: 88px;
+
+$column-header-border-top: 1px;
+$column-header-border-right: 1px;
+$column-header-border-bottom: 1px;
+$column-header-border-left: 1px;
+$column-header-border-color: #d5d5d5;
+$column-header-bg-color: #f3f3f3;
+$column-header-height: 27px;
+$column-header-font-size: 13px;
+
+$column-min-height: 27px;
+
+// -------- SpreadSheet row ----------
+
+$row-header-width: 43px;
+$row-header-border-top: 1px;
+$row-header-border-right: 1px;
+$row-header-border-bottom: 1px;
+$row-header-border-left: 1px;
+$row-header-border-color: #d5d5d5;
+$row-header-bg-color: #f3f3f3;
+$row-header-font-size: 13px;
+
+$row-min-height: 27px;
+
+// -------- SpreadSheet cell ----------
+
+$cell-bg-color: #fff;
+$cell-hover-bg-color: rgba(125,218,252,.3)!important;
+$cell-selected-bg-color: rgba(125,218,252,.3)!important;
+$cell-border-top: 1px;
+$cell-border-right: 1px;
+$cell-border-bottom: 1px;
+$cell-border-left: 1px;
+$cell-border-color: #d5d5d5;
+$cell-min-width: 88px;
+$cell-min-height: 27px;
+
+
+// table Variables
+
+
+$table-border: 1px;
+$table-border-color: #d5d5d5;
+
+.P-spread-sheet-container {
+  max-height: 500px;
+  overflow: scroll;
+  width: fit-content;
+}
+
+
+.P-grid-header-column {
+  font-size: $column-header-font-size;
+  height: $column-header-height;
+  min-width: $column-min-width;
+  background-color: $column-header-bg-color;
+  border-right: $column-header-border-right solid $column-header-border-color;
+  border-bottom: $column-header-border-bottom solid $column-header-border-color;
+  position: sticky;
+  left: 0;
+}
+
+.P-grid-header-row {
+  font-size: $row-header-font-size;
+  width: $row-header-width;
+  min-height: $row-min-height;
+  background-color: $row-header-bg-color;
+  border-right: $column-header-border-right solid $column-header-border-color;
+  border-bottom: $column-header-border-bottom solid $column-header-border-color;
+}
+
+.P-grid-cell {
+  font-size: $column-header-font-size;
+  min-height: $cell-min-height;
+  min-width: $column-min-width;
+  background-color: $cell-bg-color;
+  border-right: $cell-border-right solid $cell-border-color;
+  border-bottom: $cell-border-bottom solid $cell-border-color;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  p {
+    width: 100%;
+    font-family: sans-serif;
+    text-align: center;
+    font-size: 17px;
+  }
+  input {
+    width: 100%;
+    height: 100%;
+  }
+  &:hover {
+    background-color: $cell-hover-bg-color;
+  }
+}
+
+.dts-select-container {
+  border: none !important;
+  background: transparent !important;
+}
+
+.dts-select-item.selected {
+  background-color: $cell-selected-bg-color;
+}
+
+
+[mwlResizable] {
+  box-sizing: border-box; // required for the enableGhostResize option to work
+}
+
+
+.dts-select-container {
+  border: none !important;
+  background: transparent !important;
+}
+
+.dts-select-item.selected {
+  background-color: $cell-selected-bg-color;
+}
+
+
+[mwlResizable] {
+  box-sizing: border-box; // required for the enableGhostResize option to work
+}
+
+
+
+.table-wrapper {
+  max-width: 700px;
+  overflow: scroll;
+  height: calc(100vh - 200px);
+}
+
+table {
+  position: relative;
+  border: 1px solid #ddd;
+  border-collapse: collapse;
+}
+
+td, th {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+th {
+  background-color: #eee;
+  position: sticky;
+  top: -1px;
+  z-index: 2;
+
+  &:first-of-type {
+    left: 0;
+    z-index: 3;
+  }
+}
+
+tbody tr td:first-of-type {
+  background-color: #eee;
+  position: sticky;
+  left: -1px;
+}
+
+tbody tr td {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-break: break-all;
+}
+
+.P-spread-header-left {
+  position: sticky;
+  top: 0;
+}
+

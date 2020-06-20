@@ -1,0 +1,28 @@
+<h1 style="margin-bottom: 20px">Vertical Scroll</h1>
+<div class="P-spread-sheet-container" (scroll)="scrollRows($event)">
+  <div [style.height.px]="rowHeight * visibleRows + 1">
+    <div [style.height.px]="rowHeight * start"></div>
+    <div *ngFor="let row of matrix | slice: start:  start + visibleRows;let rowIndex = index">
+      <div style="display: flex;width: fit-content">
+        <div class="P-grid-cell"
+             [style.width.px]="columnWidth"
+             [style.height.px]="rowHeight"
+             *ngFor="let column of row; let columnIndex = index;">
+          <p>
+            {{column}}
+          </p>
+        </div>
+      </div>
+    </div>
+    <div [style.height.px]="rowHeight * (matrix.length - (start + visibleRows))"></div>
+  </div>
+</div>
+
+<div style="display:flex;flex-direction: column">
+  <span>rowsCount: {{rowsCount}}</span>
+  <span>columnsCount: {{columnsCount}}</span>
+  <span>rowHeight: {{rowHeight}}</span>
+  <span>columnWidth: {{columnWidth}}</span>
+  <span>visibleRows: {{visibleRows}}</span>
+</div>
+
